@@ -1,0 +1,52 @@
+
+<div class="container">
+    <p>Add a User</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label"> Name </label>
+                    <input [(ngModel)]="user.userName" type="text" class="form-control" name="name">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label"> Last Name </label>
+                    <input [(ngModel)]="user.userLastName" type="text" class="form-control" name="lastName">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label"> Email </label>
+                    <input [(ngModel)]="user.userEmail" type="email" class="form-control" name="email">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label"> ID Number </label>
+                    <input [(ngModel)]="user.userDNI" type="email" class="form-control" name="dni">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label"> Photo </label>
+                    <input [(ngModel)]="user.userPhoto" type="text" class="form-control" name="photo">
+                </div>
+                
+                <button (click)="add()" class="btn btn-primary"> Add </button>
+            </form>
+        </div>
+
+
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <img src="{{user.userPhoto}}" width="100" height="100" alt="">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">{{user.userName}}</label>
+                </div>
+                
+            </form>
+        </div>
+
+    </div>
+    
+</div>
